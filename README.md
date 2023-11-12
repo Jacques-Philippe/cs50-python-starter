@@ -17,6 +17,8 @@ Download it [here](https://code.visualstudio.com/download) if you don't have it,
 
 In python one of the strategies for managing per-project package dependencies is through virtual environments. The way virtual environments usually work is the person who clones the project is responsible for creating one and afterwards you download all the required dependencies for that virtual environment from a file whose name is something like `requirements.txt`
 
+**Note: you can tell the virtual environment is activated in the terminal if your prompt is preceded by a (.venv)**
+
 ## How to create and install dependencies for the virtual environment
 
 After cloning this project, and assuming you're on a mac, run the following
@@ -25,7 +27,8 @@ After cloning this project, and assuming you're on a mac, run the following
 cd src # go to the src directory
 python3 -m venv .venv # create a virtual environment named .venv
 source .venv/bin/activate # activate the virtual environment
-pip install -r requirements.txt # install the dependencies listed in requirements.txt to your local venv
+cd .. # go back to project root
+. scripts/load-requirements.sh # install your virtual environment dependencies
 ```
 
 # To run whatever you're working on

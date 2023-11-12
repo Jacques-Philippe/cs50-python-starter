@@ -21,6 +21,10 @@ This script will run any tests you may have defined using the `pytest` package i
 
 This script will basically rate your code on cleanliness
 
+# load-requirements
+
+This script will take care of loading your virtual environment requirements from the `requirements.txt` file.
+
 # save-requirements
 
 This script will take care of saving your requirements to the `requirements.txt` file, to make sure you can share your project more easily.

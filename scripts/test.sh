@@ -1,5 +1,10 @@
 #!/bin/sh
 
-WORKING_DIRECTORY="src"
+SRC="./src"
 
-python -m pytest $WORKING_DIRECTORY
+if [ ! -d $SRC ]; then
+    printf "❌ Directory $SRC wasn't found.\nMake sure you're running this from project root."
+    return
+fi
+
+python -m pytest $SRC -v
